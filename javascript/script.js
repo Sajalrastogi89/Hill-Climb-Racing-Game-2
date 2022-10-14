@@ -53,7 +53,7 @@ let carKeys = {
   },
 };
 car.src = "/images/car2.jpg";
-let cX =canvas.width/4;
+let cX =280;
 let cY = -100;
 let carMove = (dY) => {
   // console.log(dY);
@@ -65,7 +65,6 @@ function dCaclulate() {
   var p = 500;
   count += cX;
   distance.innerHTML = Math.floor(count/100);
-  
 }
 let i5 = 0;
 // window.addEventListener("keydown", (event) => {
@@ -93,7 +92,7 @@ function coin(d){
 coin.src = "/images/coin.png";
 c.drawImage(coin, coinDistance,d - 120, 70, 50);
 coinDistance=coinDistance-h1;
-if(coinDistance<=112){
+if(coinDistance<=380){
 coinDistance=canvas.width;
 score+=50;}
 }
@@ -104,7 +103,7 @@ function coin1(d){
 coin.src = "/images/coin.png";
 c.drawImage(coin, coinDistance1,d - 120, 70, 50);
 coinDistance1=coinDistance1-h1;
-if(coinDistance1<=112){
+if(coinDistance1<=380){
 coinDistance1=canvas.width;
 score+=50;
 // coin1(A[canvas.width-20]);
@@ -119,7 +118,7 @@ function coin2(d){
 coin.src = "/images/petrolTanker.png";
 c.drawImage(coin, coinDistance2,d - 120, 70, 50);
 coinDistance2=coinDistance2-h1;
-if(coinDistance2<=112){
+if(coinDistance2<=380){
 coinDistance2=canvas.width;
 // coin2(A[canvas.width-20]);
 // fuelTanker2++;
@@ -176,7 +175,7 @@ let count2 = 0;
 /*ANIMATE FUNCTION */
 let position = 0;
 
-let o=canvas.width/4+25;
+let o=canvas.width/4+20;
 function animate() {
   c.fillRect(0, 0, canvas.width, canvas.height);
  
