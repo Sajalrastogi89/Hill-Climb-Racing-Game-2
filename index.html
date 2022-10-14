@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="/images/car2.jpg" />
+    <style>
+      body {
+        background: url(/images/bg1.jpg) no-repeat center fixed;
+        background-size: cover;
+        opacity: 0.9;
+      }
+    </style>
+    <title>Game</title>
+  </head>
+  <body>
+    <section id="firstPage">
+      <img id="title" src="/images/name (2).png" />
+      <h1 id="load">Loading...</h1>
+      <div id="loadingBg">
+        <div id="loading"></div>
+      </div>
+    </section>
+    <script>
+      let load = document.getElementById("loadingBg");
+      let loading = document.getElementById("loading");
+
+      let start = 50;
+
+      let loadBar = setInterval(animate, 300);
+      function newPage() {
+        window.open("/html/game.html");
+      }
+      function animate() {
+        if (start >= 670) clearInterval(loadBar, 500);
+        start = start + 10;
+        loading.style.width = start + "px";
+        if (start == 660) newPage();
+      }
+      animate();
+    </script>
+  </body>
+</html>
