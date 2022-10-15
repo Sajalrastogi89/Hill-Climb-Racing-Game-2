@@ -35,9 +35,9 @@
       }
       function animate() {
         if (start >= 670) clearInterval(loadBar, 500);
-        start = start + 10;
+        start = start + 50;
         loading.style.width = start + "px";
-        if (start == 660) newPage();
+        if (start >= 660) newPage();
       }
       animate();
     </script>

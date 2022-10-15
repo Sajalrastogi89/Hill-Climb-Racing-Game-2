@@ -30,7 +30,7 @@ function land(x) {
 let carDistance = 0;
 let img = new Image();
 // let d = document.getElementById("distance");
-let arrow = document.getElementById("arrow");
+// let arrow = document.getElementById("arrow");
 
 function dCaclulate() {
   distance.innerHTML = carDistance;
@@ -40,7 +40,7 @@ function dPosition() {
   setInterval(() => {
     dPoint += 0.4;
     d.style.left = dPoint + "px";
-    arrow.style.left = dPoint + "px";
+    // arrow.style.left = dPoint + "px";
   }, 300);
 }
 let car = new Image();
@@ -64,7 +64,7 @@ function dCaclulate() {
   
   var p = 500;
   count += cX;
-  distance.innerHTML = Math.floor(count/100);
+  distance.innerHTML = Math.floor(count/1000);
 }
 let i5 = 0;
 // window.addEventListener("keydown", (event) => {
@@ -114,9 +114,9 @@ console.log(score);
 
 let coinDistance2=canvas.width/4;
 function coin2(d){
-  let coin = new Image();
-coin.src = "/images/petrolTanker.png";
-c.drawImage(coin, coinDistance2,d - 120, 70, 50);
+  let petrol9 = new Image();
+petrol9.src = "/images/petrolTanker.png";
+c.drawImage(petrol9, coinDistance2,d - 120, 70, 50);
 coinDistance2=coinDistance2-h1;
 if(coinDistance2<=380){
 coinDistance2=canvas.width;
@@ -161,9 +161,7 @@ pLine.style.backgroundColor = "rgb(21, 139, 41)";
 //     pLine.style.backgroundColor = "rgb(21, 139, 41)";
 //     start = 250;
 //   }
-//   if (start < -2) {
-//     window.location.assign("/html/out.html");
-//   }
+ 
 //   let petrol2 = new Image();
 //   petrol2.src = "/images/tank (2).png";
 //   for (var k = 0; k < 3; k++) {
@@ -244,6 +242,7 @@ window.addEventListener("keyup", (event) => {
   }
   if (event.key == "ArrowLeft") {
     carKeys.left.pressed = false;
+    h1=1;
   }
 });
 // animate();
@@ -261,6 +260,9 @@ function petrolWork() {
     pLine.style.transition = "0.2s ease";
   }
   start = start - 5;
+  if (start < -2) {
+    window.location.assign("/html/out.html");
+  }
   pLine.style.width = start + "px";
   // console.log(start);
 }
@@ -292,7 +294,7 @@ load.addEventListener("click", () => {
   fuel1.style.visibility = "visible";
   fuelImage.style.visibility = "visible";
   coinImage.style.visibility = "visible";
-  arrow.style.visibility = "visible";
+  // arrow.style.visibility = "visible";
   dPosition();
   animate();
 });
